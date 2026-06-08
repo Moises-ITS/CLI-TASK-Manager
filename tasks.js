@@ -14,11 +14,12 @@ try {
             break;
         case "delete": updated = remove(arg, tasks); break;
         case "clear": updated = clear(); break;
-        case "complete": updated = complete(parseInt(arg, 10), tasks); break;
+        case "complete": updated = complete(arg, tasks); break;
         case "list": list(tasks); break;
         default: throw new Error("Command not Found");
     };
     if (updated) saveTasks(updated); 
 } catch (error) {
-    console.log("Error 404", error.message)
+    console.log(`Error: ${error.message}`);
+    process.exit(1);
 }
