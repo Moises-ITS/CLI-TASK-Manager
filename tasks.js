@@ -8,8 +8,11 @@ let updated;
 
 try {
     switch(command) {
-        case "add": updated = add(arg, tasks); break;
-        case "delete": updated = remove(parseInt(arg, 10), tasks); break;
+        case "add":
+            if(!arg) throw new Error("Please provide task text")
+            updated = add(arg, tasks);
+            break;
+        case "delete": updated = remove(arg, tasks); break;
         case "clear": updated = clear(); break;
         case "complete": updated = complete(parseInt(arg, 10), tasks); break;
         case "list": list(tasks); break;
