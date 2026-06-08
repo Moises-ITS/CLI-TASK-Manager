@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "text": "Banana",
+    "completed": true,
+    "createdAt": "2026-06-08T20:14:10.728Z"
+  },
+  {
+    "id": 2,
+    "text": "Apple",
+    "completed": false,
+    "createdAt": "2026-06-08T20:14:18.173Z"
+  },
+  {
+    "id": 3,
+    "text": "Orange",
+    "completed": false,
+    "createdAt": "2026-06-08T20:14:26.035Z"
+  }
+]
